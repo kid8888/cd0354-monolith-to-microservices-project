@@ -25,4 +25,4 @@ after_success:
   - docker push morehwachege/udagram-api-feed:v1
   - docker push morehwachege/udagram-api-user:v1
   - docker push morehwachege/udagram-frontend:v1
-  - docker push morehwachege/reverseproxy:v2
+  - docker push morehwachege/reverseproxy:v1
