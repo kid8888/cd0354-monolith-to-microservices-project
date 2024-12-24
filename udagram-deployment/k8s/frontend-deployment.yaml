@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: udagram-frontend
   namespace: default
 spec:
   replicas: 2
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: udagram-frontend
-        image: sunyi4869/udagram-frontend:v5
+        image: sunyi4869/udagram-frontend:v6
         ports:
         - containerPort: 8100
         envFrom:
