@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: sunyi4869/reverseproxy:v3
+        image: sunyi4869/reverseproxy:v4
         resources:
           requests:
             memory: "128Mi"
