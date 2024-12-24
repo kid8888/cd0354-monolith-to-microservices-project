@@ -19,11 +19,11 @@ jobs:
 
     # Step 2: 设置 Docker
     - name: Setup Docker
-      uses: docker/setup-buildx-action@v2
+      uses: docker/setup-buildx-action@v3
 
     # Step 3: 登录 DockerHub
     - name: Log in to DockerHub
-      uses: docker/login-action@v2
+      uses: docker/login-action@v3
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
@@ -32,26 +32,26 @@ jobs:
     - name: Build and Push udagram-api-feed
       run: |
         docker build -t udagram-api-feed ./udagram-api-feed
-        docker tag udagram-api-feed sunyi4869/udagram-api-feed:v2
-        docker push sunyi4869/udagram-api-feed:v2
+        docker tag udagram-api-feed sunyi4869/udagram-api-feed:v3
+        docker push sunyi4869/udagram-api-feed:v3
 
     # Step 5: 构建和推送 udagram-api-user
     - name: Build and Push udagram-api-user
       run: |
         docker build -t udagram-api-user ./udagram-api-user
-        docker tag udagram-api-user sunyi4869/udagram-api-user:v2
-        docker push sunyi4869/udagram-api-user:v2
+        docker tag udagram-api-user sunyi4869/udagram-api-user:v3
+        docker push sunyi4869/udagram-api-user:v3
 
     # Step 6: 构建和推送 udagram-frontend
     - name: Build and Push udagram-frontend
       run: |
         docker build -t udagram-frontend ./udagram-frontend
-        docker tag udagram-frontend sunyi4869/udagram-frontend:v2
-        docker push sunyi4869/udagram-frontend:v2
+        docker tag udagram-frontend sunyi4869/udagram-frontend:v3
+        docker push sunyi4869/udagram-frontend:v3
 
     # Step 7: 构建和推送 reverseproxy
     - name: Build and Push reverseproxy
       run: |
         docker build -t reverseproxy ./udagram-reverseproxy
-        docker tag reverseproxy sunyi4869/reverseproxy:v2
-        docker push sunyi4869/reverseproxy:v2
+        docker tag reverseproxy sunyi4869/reverseproxy:v3
+        docker push sunyi4869/reverseproxy:v3
