@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend-feed
-  namespace: default
 spec:
   replicas: 2
   selector:
@@ -15,11 +14,11 @@ spec:
     spec:
       containers:
       - name: backend-feed
-        image: sunyi4869/backend-feed:v2
+        image: sunyi4869/udagram-api-feed:v2
         ports:
         - containerPort: 8080
         envFrom:
         - configMapRef:
-            name: env-configmap
+            name: env-config
         - secretRef:
             name: env-secret

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: backend-user
-        image: sunyi4869/backend-user:v2
+        image: sunyi4869/udagram-api-user:v2
         ports:
         - containerPort: 8080
         envFrom:
