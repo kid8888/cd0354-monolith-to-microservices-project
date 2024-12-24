@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: backend-feed
-        image: sunyi4869/backend-feed:latest
+        image: sunyi4869/backend-feed:v2
         ports:
         - containerPort: 8080
         envFrom:

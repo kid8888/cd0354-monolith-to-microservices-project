@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: sunyi4869/reverseproxy:latest
+        image: sunyi4869/reverseproxy:v2
         ports:
         - containerPort: 8080
         envFrom:

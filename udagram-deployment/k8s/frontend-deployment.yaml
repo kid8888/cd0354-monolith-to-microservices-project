@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: sunyi4869/frontend:latest
+        image: sunyi4869/frontend:v2
         ports:
         - containerPort: 8100
