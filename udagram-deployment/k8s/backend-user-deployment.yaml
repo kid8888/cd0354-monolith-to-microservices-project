@@ -16,6 +16,13 @@ spec:
       containers:
       - name: backend-user
         image: sunyi4869/udagram-api-user:v2
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
+          limits:
+            memory: "2048Mi"
+            cpu: "500m"
         ports:
         - containerPort: 8080
         envFrom:
@@ -23,3 +30,4 @@ spec:
             name: env-configmap
         - secretRef:
             name: env-secret
+            
