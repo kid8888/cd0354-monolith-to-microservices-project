@@ -7,4 +7,4 @@ data:
   POSTGRES_DB: postgres
   AWS_BUCKET: course4project
   AWS_REGION: us-east-1
-  URL: http://10.100.4.172:8100
+  URL: http://a35345b9b9c3942a4ab336d0323ba866-1507942989.us-east-1.elb.amazonaws.com:8100
